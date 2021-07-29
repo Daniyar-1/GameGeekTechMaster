@@ -3,8 +3,10 @@ package com.example.gamegeektech;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -47,7 +49,26 @@ public class GameScreen1 extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Вы угадали слово!");
                 builder.setMessage("Молодец, пойдём дальше?");
+                builder.setCancelable(true);
 
+                builder.setPositiveButton("Да", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(GameScreen1.this, GameScreen2.class);
+                        startActivity(intent);
+                    }
+                });
+
+                builder.setNegativeButton("В главное меню", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(GameScreen1.this, MainActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
+                AlertDialog alert = builder.create();
+                alert.show();
 
 
             } else if (etInput.getText().toString().isEmpty()) {
@@ -58,8 +79,13 @@ public class GameScreen1 extends AppCompatActivity {
         });
 
         btnDelete.setOnClickListener(v -> {
-            String text = etInput.getText().toString();
-            etInput.setText(text.substring(0, text.length() - 1));
+            if (!etInput.getText().toString().isEmpty()) {
+                btnDelete.setEnabled(true);
+                String text = etInput.getText().toString();
+                etInput.setText(text.substring(0, text.length() - 1));
+            } else {
+                btnDelete.setEnabled(false);
+            }
         });
 
         letter1.setOnClickListener(v -> {
