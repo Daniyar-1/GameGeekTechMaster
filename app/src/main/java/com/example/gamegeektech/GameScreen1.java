@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -78,13 +80,32 @@ public class GameScreen1 extends AppCompatActivity {
             }
         });
 
-        btnDelete.setOnClickListener(v -> {
-            if (!etInput.getText().toString().isEmpty()) {
-                btnDelete.setEnabled(true);
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 String text = etInput.getText().toString();
                 etInput.setText(text.substring(0, text.length() - 1));
-            } else {
-                btnDelete.setEnabled(false);
+            }
+        });
+
+        etInput.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() != 0) {
+                    btnDelete.setVisibility(View.VISIBLE);
+                } else {
+                    btnDelete.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
             }
         });
 
