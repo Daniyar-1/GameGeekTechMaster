@@ -40,7 +40,8 @@ public class GameScreen1 extends AppCompatActivity {
         letter6 = findViewById(R.id.letter6);
         letter7 = findViewById(R.id.letter7);
         letter8 = findViewById(R.id.letter8);
-        letter9 = findViewById(R.id.letter9);
+        letter9 = findViewById(R.id.letter9
+ );
         letter10 = findViewById(R.id.letter10);
         letter11 = findViewById(R.id.letter11);
         letter12 = findViewById(R.id.letter12);

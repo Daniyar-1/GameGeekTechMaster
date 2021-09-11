@@ -8,7 +8,8 @@
     android:orientation="vertical"
     tools:context=".GameScreen2">
 
-    <LinearLayout
+
+       <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -19,7 +20,7 @@
             android:layout_height="150dp"
             android:layout_marginRight="8dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/img1_page1"
+            android:src="@drawable/img1_page2"
 
             />
 
@@ -28,7 +29,7 @@
             android:layout_height="150dp"
             android:layout_marginLeft="8dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/img2_page1" />
+            android:src="@drawable/img2_page2" />
 
     </LinearLayout>
 
@@ -43,7 +44,7 @@
             android:layout_height="150dp"
             android:layout_marginRight="8dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/img3_page1"
+            android:src="@drawable/img3_page2"
 
             />
 
@@ -52,7 +53,7 @@
             android:layout_height="150dp"
             android:layout_marginLeft="8dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/img4_page1" />
+            android:src="@drawable/img4_page2" />
 
     </LinearLayout>
 
@@ -90,15 +91,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:gravity="center">
-
-        <TextView
+  <TextView
             android:id="@+id/letter1"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:layout_marginRight="12dp"
             android:background="@drawable/style_text"
             android:gravity="center"
-            android:text="Ф"
+            android:text="П"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -123,7 +123,7 @@
             android:layout_marginRight="12dp"
             android:background="@drawable/style_text"
             android:gravity="center"
-            android:text="Ц"
+            android:text="А"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -149,7 +149,7 @@
             android:layout_marginRight="12dp"
             android:background="@drawable/style_text"
             android:gravity="center"
-            android:text="Н"
+            android:text="Т"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -183,7 +183,7 @@
             android:layout_marginRight="12dp"
             android:background="@drawable/style_text"
             android:gravity="center"
-            android:text="А"
+            android:text="С"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -195,7 +195,7 @@
             android:layout_marginRight="12dp"
             android:background="@drawable/style_text"
             android:gravity="center"
-            android:text="Й"
+            android:text="И"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />

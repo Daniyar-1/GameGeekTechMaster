@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GameGeekTech">
-        <activity android:name=".GameScreen2"></activity>
+        <activity android:name=".GameScreen6"></activity>
+        <activity android:name=".GameScreen5" />
+        <activity android:name=".GameScreen4" />
+        <activity android:name=".GameScreen3" />
+        <activity android:name=".GameScreen2" />
         <activity android:name=".GameScreen1" />
         <activity android:name=".MainActivity">
             <intent-filter>

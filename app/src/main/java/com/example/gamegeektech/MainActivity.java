@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         btnPlay.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this,GameScreen1.class);
             startActivity(intent);
-
         });
     }
 }
